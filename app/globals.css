@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  border-color: rgb(30 41 59);
+}
+
+html,
+body {
+  background: #0d1117;
+  color: rgb(226 232 240);
+}
+
+body {
+  font-family: var(--font-space-grotesk), sans-serif;
+}
+
+code,
+pre {
+  font-family: var(--font-ibm-plex-mono), monospace;
+}
+
+@theme inline {
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
